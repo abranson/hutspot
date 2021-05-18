@@ -12,7 +12,8 @@
 # The name of your application
 TARGET = hutspot
 
-CONFIG += sailfishapp
+CONFIG += link_pkgconfig sailfishapp
+PKGCONFIG += openssl sailfishapp
 
 SOURCES += \
     src/o2/o0baseauth.cpp \
@@ -147,7 +148,5 @@ HEADERS += \
     src/systemutil.h
 
 INCLUDEPATH += src/qmdnsengine
-
-QMAKE_LFLAGS += -lssl -lcrypto
 
 CONFIG += console
